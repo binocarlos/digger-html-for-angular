@@ -10,11 +10,13 @@
   "development": {},
   "license": "MIT",
   "main": "index.js",
+  
   "styles": [
-    
+    "dist/abn_tree_style.css"
   ],
+  
   "scripts": [
     "index.js",
-    "template.js"
+    "dist/abn_tree_template.js"
   ]
 }

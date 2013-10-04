@@ -13,11 +13,11 @@
 	  	<!--
 	    	tag
 	     -->
-	    &lt;<span class="diggertag">{{ model._digger.tag}}</span> 
+	    &lt;<span class="diggertag">{{ model._digger.tag }}</span> 
 	    <!--
 	    	id
 	     -->
-	    <span ng-show="model._digger.id">class="<span class="diggerid">{{ model._digger.id }}</span>"</span>
+	    <span ng-show="model._digger.id">id="<span class="diggerid">{{ model._digger.id }}</span>"</span>
 	    <!--
 	    	class
 	     -->
@@ -31,20 +31,22 @@
 	    <!--
 	    	no children
 	     -->
-	    <span ng-show="children.length<=0">
+	    <span ng-show="model._children.length<=0">
 	    	/ &gt;
 	    </span>
-	    <span ng-hide="children.length<=0">
+	    <span ng-hide="model._children.length<=0">
 	    	&gt;
 	    </span>
 	  </div>
-	  <div ng-hide="children.length<=0">
+	  
 	  	<div style="margin-left:20px">
-	  		CHILDREN
+	  		<div ng-repeat="child in model._children">
+	  			<digger-html container="child" />
+	  		</div>
 	  	</div>
 
     	&lt;/<span id="diggertag">{{ model._digger.tag}}</span>&gt;
-    </div>
+    
 
   </div>
 

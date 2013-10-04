@@ -6,7 +6,7 @@ components: component.json
 	@component install --dev
 
 templates:
-	@component convert template.html
+	@component convert dist/abn_tree_template.html
 
 clean:
 	rm -fr build components
