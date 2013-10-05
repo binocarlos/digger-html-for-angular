@@ -1,70 +1,94 @@
-ul.nav.nav-list.abn-tree i.indented {
+ul.nav.nav-list.digger-html i.indented {
   padding: 2px;
 }
-.abn-tree-animate-enter {
+.digger-html-animate-enter {
   transition: 150ms linear all;
   position: relative;
   display: block;
   opacity: 0;
   max-height: 0px;
 }
-.abn-tree-animate-enter.abn-tree-animate-enter-active {
+.digger-html-animate-enter.digger-html-animate-enter-active {
   opacity: 1;
   max-height: 30px;
 }
-.abn-tree-animate-leave {
+.digger-html-animate-leave {
   transition: 150ms linear all;
   position: relative;
   display: block;
   max-height: 30px;
   opacity: 1;
 }
-.abn-tree-animate-leave.abn-tree-animate-leave-active {
+.digger-html-animate-leave.digger-html-animate-leave-active {
   max-height: 0px;
   opacity: 0;
 }
-ul.nav.nav-list.abn-tree .level-1 .indented {
+ul.nav.nav-list.digger-html .level-1 .indented {
   position: relative;
   left: 0px;
 }
-ul.nav.nav-list.abn-tree .level-2 .indented {
+ul.nav.nav-list.digger-html .level-2 .indented {
   position: relative;
   left: 20px;
 }
-ul.nav.nav-list.abn-tree .level-3 .indented {
+ul.nav.nav-list.digger-html .level-3 .indented {
   position: relative;
   left: 40px;
 }
-ul.nav.nav-list.abn-tree .level-4 .indented {
+ul.nav.nav-list.digger-html .level-4 .indented {
   position: relative;
   left: 60px;
 }
-ul.nav.nav-list.abn-tree .level-5 .indented {
+ul.nav.nav-list.digger-html .level-5 .indented {
   position: relative;
   left: 80px;
 }
-ul.nav.nav-list.abn-tree .level-6 .indented {
+ul.nav.nav-list.digger-html .level-6 .indented {
   position: relative;
   left: 80px;
 }
-ul.nav.nav-list.abn-tree .level-7 .indented {
+ul.nav.nav-list.digger-html .level-7 .indented {
   position: relative;
   left: 100px;
 }
-ul.nav.nav-list.abn-tree .level-8 .indented {
+ul.nav.nav-list.digger-html .level-8 .indented {
   position: relative;
   left: 120px;
 }
-ul.nav.nav-list.abn-tree .level-9 .indented {
+ul.nav.nav-list.digger-html .level-9 .indented {
   position: relative;
   left: 140px;
 }
-ul.nav.nav-list.abn-tree li>a{
+ul.nav.nav-list.digger-html li>a{
   padding: 2px 4px;
   cursor:pointer;
 }
 
-ul.nav.nav-list.abn-tree li.active>a{
-  background-color:#0088cc;
-  color:#fff;
+ul.nav.nav-list.digger-html li.active>a{
+  /*background-color:#0088cc;
+  color:#fff;*/
+}
+
+.digger-html .code{
+  color:#999;
+}
+
+.digger-html .code .diggertag.highlighted{
+  color:#009;
+}
+
+.digger-html .code .diggerid.highlighted{
+  color:#f90;
+}
+
+.digger-html .code .diggerclass.highlighted{
+  color:#900;
+}
+
+.digger-html .code .diggerattr.highlighted{
+  color:#090;
+}
+
+.digger-html .code.selected{
+  background-color:#ff0;
 }

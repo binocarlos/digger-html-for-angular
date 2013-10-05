@@ -32,11 +32,12 @@ angular
             return;
           }
 
+          container.recurse(function(c){
+            c.data('showattributes', true);
+          })
+
           $scope.treedata = container.models;
 
-          console.log('-------------------------------------------');
-          console.log('data');
-          console.dir($scope.treedata);
         })
 
         $scope.container_select = function(model){
@@ -63,7 +64,7 @@ angular
         attrs.iconCollapse = 'icon-minus';
       }
       if (attrs.iconLeaf == null) {
-        attrs.iconLeaf = 'icon-chevron-right';
+        attrs.iconLeaf = '';//icon-chevron-right';
       }
       if (attrs.expandLevel == null) {
         attrs.expandLevel = '3';
@@ -185,10 +186,24 @@ angular
             }
           }
           var digger = branch._digger || {};
+          var classnames = digger.class || [];
+          var classst = classnames.join(' ');
+          branch._classst = classst;
+
+          var cattrs = branch;
+          var display_attrs = [];
+          for(var prop in cattrs){
+            if(prop!='label' && prop.indexOf('_')!=0 && typeof(cattrs[prop])!='object'){
+              display_attrs.push({
+                value:cattrs[prop],
+                title:prop
+              })
+            }
+          }
+          branch._display_attrs = display_attrs;
           scope.tree_rows.push({
             level: level,
             branch: branch,
-            label: branch.name || branch.title || digger.tag || 'model',
             tree_icon: tree_icon,
             visible: visible
           });
