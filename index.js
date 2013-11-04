@@ -200,7 +200,7 @@ angular
               })
             }
           }
-          branch._display_attrs = display_attrs;
+          branch._data._display_attrs = display_attrs;
           scope.tree_rows.push({
             level: level,
             branch: branch,

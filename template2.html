@@ -1,0 +1,53 @@
+<div>
+
+  <div style="float:left; width:30px">
+    <a href="" ng-click="toggleview()">
+      <span ng-show="childrenactive">-</span>
+      <span ng-hide="childrenactive">+</span>
+    </a>
+  </div>
+
+  <div style="margin-left:30px;">
+
+  	<div>
+	  	<!--
+	    	tag
+	     -->
+	    &lt;<span class="diggertag">{{ model._digger.tag }}</span> 
+	    <!--
+	    	id
+	     -->
+	    <span ng-show="model._digger.id">id="<span class="diggerid">{{ model._digger.id }}</span>"</span>
+	    <!--
+	    	class
+	     -->
+	    <span ng-hide="model._digger.class.length<=0">class="<span class="diggerclass">{{ model._digger.class.join(' ') }}</span>"</span>
+
+	    <!--
+	    	attributes
+	     -->
+	    <span ng-repeat="attr in display_attrs" >{{attr.title}}="<span id="attr{{$index}}">{{ attr.value }}</span>" </span>
+
+	    <!--
+	    	no children
+	     -->
+	    <span ng-show="model._children.length<=0">
+	    	/ &gt;
+	    </span>
+	    <span ng-hide="model._children.length<=0">
+	    	&gt;
+	    </span>
+	  </div>
+	  
+	  	<div style="margin-left:20px">
+	  		<div ng-repeat="child in model._children">
+	  			<digger-html container="child" />
+	  		</div>
+	  	</div>
+
+    	&lt;/<span id="diggertag">{{ model._digger.tag}}</span>&gt;
+    
+
+  </div>
+
+</div>

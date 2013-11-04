@@ -19,7 +19,7 @@
 		    	attributes
 		    -->
 		    <span ng-show="row.branch._data.showattributes">
-		    	<span ng-repeat="attr in row.branch._display_attrs">{{attr.title}}="<span ng-class="{highlighted:(row.branch._data.highlighted=='attr')}" class="diggerattr">{{ attr.value }}</span>" </span>
+		    	<span ng-repeat="attr in row.branch._data._display_attrs">{{attr.title}}="<span ng-class="{highlighted:(row.branch._data.highlighted=='attr')}" class="diggerattr">{{ attr.value }}</span>" </span>
 		    </span>
 
 		    <span ng-hide="row.branch._data.showattributes">
