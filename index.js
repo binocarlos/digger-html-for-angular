@@ -188,7 +188,7 @@ angular
           var digger = branch._digger || {};
           var classnames = digger.class || [];
           var classst = classnames.join(' ');
-          branch._classst = classst;
+          branch._data._classst = classst;
 
           var cattrs = branch;
           var display_attrs = [];
