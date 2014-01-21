@@ -1,6 +1,6 @@
 {
   "name": "digger-html-for-angular",
-  "repo": "binocarlos/digger-html-for-angular",
+  "repo": "diggerio/digger-html-for-angular",
   "description": "Renders a HTML view of digger containers - it can be used to highlight selector results in a larger data set",
   "version": "0.0.1",
   "keywords": [],
